@@ -13,6 +13,3 @@ As per your need, you can reuse/modify the output of a shortcode via a hook so t
 Please don't use our issue tracker for support requests, but for WP HTML Block issues only. For support, go to [WP HTML Block support](http://phpprogrammernepal.com/wp-html-block/) page.
 
 Support requests in issues on this repository will be closed on sight.
-=======
-# wp-html-block
-WP HTML Block help you to create HTML Block so that you can insert it to any place via shortcode.
