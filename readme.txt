@@ -1,8 +1,8 @@
 === WP HTML Block ===
 Contributors: sapkota
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3UVYTWKNYBENL
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GUD46MKUE4RKQ
 Tags: html block, html area, block, insert, pages, posts, insert html, content, content block, reusable, shortcode, paypal, editor, tinymce, snippet, formatting, iframe
-Requires at least: 3.0
+Requires at least: 4.0
 Tested up to: 4.4
 Stable tag: 1.0.1
 License: GPLv2 or later
@@ -16,7 +16,7 @@ WP HTML Block help you to create HTML Block so that you can insert it to any pla
 
 As per your need, you can modify the output so that you can decide if title, description or image displays and also an alignments. WP HTML Block provides you a really simple way to add third pary code like PayPal donation buttons, iFrames etc. You will get separate shortcode for each HTML Block you create.
 
-== 3 easy steps: ==
+= 3 easy steps: =
 
 * Create HTML block
 * Copy shortcode
@@ -51,6 +51,16 @@ No FAQ yet.
 * Added: Support for shortcode in widget area
 * Added: Support for full size image in Block settings
 
-= 1.0 =
+= 1.0.0 =
 
 * First release.
+
+== Upgrade Notice ==
+
+= 1.0.1 =
+
+* Version 1.0.1 fixed the issue of description field that is showing on all post types, support for shortcode in widget area and now full size image is sipport in Block settings.
+
+= 1.0.0 =
+
+* This is a first release.
