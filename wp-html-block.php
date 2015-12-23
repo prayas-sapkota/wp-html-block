@@ -2,24 +2,26 @@
 /*
 Plugin Name: WP HTML Block
 Plugin URI: http://phpprogrammernepal.com/wp-html-block
-Description: WP HTML Block help you to create HTML Block so that you can insert it to any place like page, post, custom post type, widget etc via shortcode or a button in the TinyMCE visual editor toolbar.
+Description: WP HTML Block help you to create HTML Block so that you can insert it to any place like page, post, custom post type, widget etc via shortcode.
 Author: Prayas Sapkota
-Version: 1.0.0
+Version: 1.0.1
 Author URI: http://prayas-sapkota.com.np/
 Text Domain: wphtmlblock
 */
 
-define( 'WPHTMLBLOCK_VERSION', '1.0.0' );
+define( 'WPHTMLBLOCK_VERSION', '1.0.1' );
 define( 'WPHTMLBLOCK_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'WPHTMLBLOCK_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-
-//register_activation_hook( __FILE__, array( 'Wphtmlblock', 'plugin_activation' ) );
 
 require_once( WPHTMLBLOCK_PLUGIN_DIR . 'class.wphtmlblock.php' );
 
 add_action( 'init', array( 'Htmlblock', 'init' ) );
 add_action( 'wp_head', 'wphtmlblock_add_css', 1000 );
 add_shortcode( 'wphtmlblock', 'wphtmlblock_add_shortcode' );
+/**
+ * Add support for shortcode in widget area
+ */
+add_filter('widget_text', 'do_shortcode');
 
 function wphtmlblock_add_shortcode( $atts ) {
     $atts = shortcode_atts( array(

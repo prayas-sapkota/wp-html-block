@@ -263,6 +263,10 @@ class Htmlblock {
     }
 
     public static function wphtmlblock_edit_form_after_title( $post ) {
+        $screen = get_current_screen();
+        if  ( 'html-block' != $screen->post_type ) {
+            return;
+        }
         ?>
         <div id="descriptiondiv">
             <div id="descriptionwrap">
@@ -342,6 +346,7 @@ class Htmlblock {
                 <select id="block-img-size" name="htmlblock_img_size">
                     <?php
                     foreach( get_intermediate_image_sizes() as $size ) {
+                        //print_r($size);
                         if( $size != 'medium_large' ) {
                             if ( in_array( $size, array( 'thumbnail', 'medium', 'large' ) ) ) {
                                 $width  = get_option( $size.'_size_w' );
@@ -357,6 +362,7 @@ class Htmlblock {
                         }
                     }
                     ?>
+                    <option value="full">full</option>
                 </select>
             </p>
         </div>
